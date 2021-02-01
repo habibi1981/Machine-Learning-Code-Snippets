@@ -1,0 +1,27 @@
+Manually managing the scaling of the target variable involves creating and applying the scaling
+object to the data manually. It involves the following steps:
+1. Create the transform object, e.g. a MinMaxScaler.
+2. Fit the transform on the training dataset.
+3. Apply the transform to the train and test datasets.
+4. Invert the transform on any predictions made.
+
+For example, if we wanted to normalize a target variable, we would first define and train a
+MinMaxScaler object:
+
+# create target scaler object
+target_scaler = MinMaxScaler()
+target_scaler.fit(train_y)
+
+We would then transform the train and test target variable data.
+# transform target variables
+train_y = target_scaler.transform(train_y)
+test_y = target_scaler.transform(test_y)
+
+Then we would fit our model and use the model to make predictions. Before the predictions
+can be used or evaluated with an error metric, we would have to invert the transform.
+# invert transform on predictions
+yhat = model.predict(test_X)
+yhat = target_scaler.inverse_transform(yhat)
+
+This is a pain, as it means you cannot use convenience functions in scikit-learn, such as
+cross val score(), to quickly evaluate a model.

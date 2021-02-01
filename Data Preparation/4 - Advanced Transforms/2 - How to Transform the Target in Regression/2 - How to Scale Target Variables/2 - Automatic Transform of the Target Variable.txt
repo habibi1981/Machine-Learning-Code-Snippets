@@ -1,0 +1,20 @@
+An alternate approach is to automatically manage the transform and inverse transform. This can
+be achieved by using the TransformedTargetRegressor object that wraps a given model and a
+scaling object. It will prepare the transform of the target variable using the same training data
+used to fit the model, then apply that inverse transform on any new data provided when calling
+fit(), returning predictions in the correct scale. To use the TransformedTargetRegressor, it
+is defined by specifying the model and the transform object to use on the target; for example:
+
+# define the target transform wrapper
+wrapped_model = TransformedTargetRegressor(regressor=model, transformer=MinMaxScaler())
+
+Later, the TransformedTargetRegressor instance can be fit like any other model by calling
+the fit() function and used to make predictions by calling the predict() function.
+
+# use the target transform wrapper
+wrapped_model.fit(train_X, train_y)
+yhat = wrapped_model.predict(test_X)
+
+This is much easier and allows you to use helpful functions like cross val score() to
+evaluate a model. Now that we are familiar with the TransformedTargetRegressor, let's look
+at an example of using it on a real dataset.
