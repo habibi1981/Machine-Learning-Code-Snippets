@@ -1,0 +1,14 @@
+The solution is to save the data preparation object to file along with the model. For example, it
+is common to use the pickle framework (built-in to Python) for saving machine learning models
+for later use, such as saving a final model. This same framework can be used to save the object
+that was used for data preparation. Later, the model and the data preparation object can be
+loaded and used.
+It is convenient to save the entire objects to file, such as the model object and the data
+preparation object. Nevertheless, experts may prefer to save just the model parameters to file,
+then load them later and set them into a new model object. This approach can also be used
+with the coefficients used for scaling the data, such as the min and max values for each variable,
+or the mean and standard deviation for each variable.
+The choice of which approach is appropriate for your project is up to you, but I recommend
+saving the model and data preparation object (or objects) to file directly for later use. To make
+the idea of saving the object and data transform object to file concrete, let's look at a worked
+example.

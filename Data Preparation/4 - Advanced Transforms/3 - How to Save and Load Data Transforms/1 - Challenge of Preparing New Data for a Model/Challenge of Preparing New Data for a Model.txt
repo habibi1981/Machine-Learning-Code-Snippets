@@ -1,0 +1,20 @@
+Each input variable in a dataset may have different units. For example, one variable may be in
+inches, another in miles, another in days, and so on. As such, it is often important to scale data
+prior to fitting a model. This is particularly important for models that use a weighted sum of
+the input or distance measures like logistic regression, neural networks, and k-nearest neighbors.
+This is because variables with larger values or ranges may dominate or wash out the effects of
+variables with smaller values or ranges.
+Scaling techniques, such as normalization or standardization, have the effect of transforming
+the distribution of each input variable to be the same, such as the same minimum and maximum in
+the case of normalization or the same mean and standard deviation in the case of standardization.
+A scaling technique must be fit, which just means it needs to calculate coefficients from data,
+such as the observed min and max, or the observed mean and standard deviation. These values
+can also be set by domain experts.
+The best practice when using scaling techniques for evaluating models is to fit them on the
+training dataset, then apply them to the training and test datasets. Or, when working with a
+final model, to fit the scaling method on the training dataset and apply the transform to the
+training dataset and any new dataset in the future. It is critical that any data preparation or
+transformation applied to the training dataset is also applied to the test or other dataset in
+the future. This is straightforward when all of the data and the model are in memory. This is
+challenging when a model is saved and used later. What is the best practice to scale data when
+saving a fit model for later use, such as a final model?
