@@ -1,0 +1,9 @@
+Dimensionality reduction refers to techniques for reducing the number of input variables in
+training data.
+When dealing with high dimensional data, it is often useful to reduce the dimen-sionality by projecting the data to a lower dimensional subspace which captures the "essence" of the data. This is called dimensionality reduction.
+High-dimensionality might mean hundreds, thousands, or even millions of input variables.Fewer input dimensions often mean correspondingly fewer parameters or a simpler structure in the machine learning model, referred to as degrees of freedom. A model with too many degrees
+of freedom is likely to overfit the training dataset and therefore may not perform well on new data. It is desirable to have simple models that generalize well, and in turn, input data with few input variables. This is particularly true for linear models where the number of inputs and the degrees of freedom of the model are often closely related.
+The fundamental reason for the curse of dimensionality is that high-dimensional functions have the potential to be much more complicated than low-dimensional ones, and that those complications are harder to discern. The only way to beat the curse is to incorporate knowledge about the data that is correct.
+Dimensionality reduction is a data preparation technique performed on data prior to modeling. It might be performed after data cleaning and data scaling and before training a predictive model.
+dimensionality reduction yields a more compact, more easily interpretable repre-sentation of the target concept, focusing the user's attention on the most relevant variables.
+As such, any dimensionality reduction performed on training data must also be performed on new data, such as a test dataset, validation dataset, and data when making a prediction with the final model.
