@@ -1,0 +1,28 @@
+Reducing the number of input variables for a predictive model is referred to as dimensionality
+reduction. Fewer input variables can result in a simpler predictive model that may have better
+performance when making predictions on new data. Perhaps the most popular technique for
+dimensionality reduction in machine learning is Principal Component Analysis, or PCA for
+short. This is a technique that comes from the field of linear algebra and can be used as a
+data preparation technique to create a projection of a dataset prior to fitting a model.
+
+ Dimensionality reduction involves reducing the number of input variables or columns in modeling data.
+ PCA is a technique from linear algebra that can be used to automatically perform dimensionality reduction.
+ How to evaluate predictive models that use a PCA projection as input and make predictions with new raw data.
+
+Dimensionality reduction refers to reducing the number of input variables for a dataset. A
+popular approach to dimensionality reduction is to use techniques from the field of linear algebra.
+This is often called feature projection and the algorithms used are referred to as projection
+methods. The resulting dataset, the projection, can then be used as input to train a machine
+learning model. Principal Component Analysis, or PCA, might be the most popular technique
+for dimensionality reduction.
+
+The most common approach to dimensionality reduction is called principal components analysis or PCA.
+
+It can be thought of as a projection method where data with m-columns (features) is
+projected into a subspace with m or fewer columns, whilst retaining the essence of the original
+data. The PCA method can be described and implemented using the tools of linear algebra,
+specifically a matrix decomposition like an Eigendecomposition or singular value decomposition (SVD).
+
+PCA can be defined as the orthogonal projection of the data onto a lower dimensional
+linear space, known as the principal subspace, such that the variance of the projected
+data is maximized
