@@ -1,0 +1,37 @@
+Reducing the number of input variables for a predictive model is referred to as dimensionality
+reduction. Fewer input variables can result in a simpler predictive model that may have better
+performance when making predictions on new data. Perhaps the most popular technique for
+dimensionality reduction in machine learning is Singular Value Decomposition, or SVD for
+short. This is a technique that comes from the field of linear algebra and can be used as a data
+preparation technique to create a projection of a sparse dataset prior to fitting a model.
+
+ Dimensionality reduction involves reducing the number of input variables or columns in modeling data.
+ SVD is a technique from linear algebra that can be used to automatically perform dimensionality reduction.
+ How to evaluate predictive models that use an SVD projection as input and make predictions with new raw data.
+
+Dimensionality reduction refers to reducing the number of input variables for a dataset. A
+popular approach to dimensionality reduction is to use techniques from the field of linear algebra.
+This is often called feature projection and the algorithms used are referred to as projection
+methods. The resulting dataset, the projection, can then be used as input to train a machine
+learning model. Singular Value Decomposition, or SVD, might be the most popular technique
+for dimensionality reduction when data is sparse.
+
+Sparse data refers to rows of data where many of the values are zero. This is often the case
+in some problem domains like recommender systems where a user has a rating for very few
+movies or songs in the database and zero ratings for all other cases. Another common example
+is a bag-of-words model of a text document, where the document has a count or frequency for
+some words and most words have a 0 value. Examples of sparse data appropriate for applying
+SVD for dimensionality reduction:
+ Recommender Systems
+ Customer-Product purchases
+ User-Song Listen Counts
+ User-Movie Ratings
+ Text Classification
+ One Hot Encoding
+ Bag-of-Words Counts
+ TF/IDF
+
+SVD can be thought of as a projection method where data with m-columns (features) is
+projected into a subspace with m or fewer columns, whilst retaining the essence of the original
+data. The SVD is used widely both in the calculation of other matrix operations, such as matrix
+inverse, but also as a data reduction method in machine learning.
