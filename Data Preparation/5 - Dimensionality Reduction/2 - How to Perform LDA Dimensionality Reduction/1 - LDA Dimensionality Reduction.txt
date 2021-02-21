@@ -1,0 +1,23 @@
+Reducing the number of input variables for a predictive model is referred to as dimensionality
+reduction. Fewer input variables can result in a simpler predictive model that may have better
+performance when making predictions on new data. Linear Discriminant Analysis, or LDA for
+short, is a predictive modeling algorithm for multiclass classification. It can also be used as
+a dimensionality reduction technique, providing a projection of a training dataset that best
+separates the examples by their assigned class. The ability to use Linear Discriminant Analysis for 
+dimensionality reduction often surprises most practitioners.
+. Dimensionality reduction involves reducing the number of input variables or columns in  modeling data.
+. LDA is a technique for multiclass classification that can be used to automatically perform dimensionality reduction.
+. How to evaluate predictive models that use an LDA projection as input and make predictions with new raw data.
+
+Linear Discriminant Analysis, or LDA, is a linear machine learning algorithm used for multiclass
+classification. It should not be confused with Latent Dirichlet Allocation (LDA), which is
+also a dimensionality reduction technique for text documents. Linear Discriminant Analysis
+seeks to best separate (or discriminate) the samples in the training dataset by their class value.
+Specifically, the model seeks to find a linear combination of input variables that achieves the
+maximum separation for samples between classes (class centroids or means) and the minimum
+separation of samples within each class.
+
+find the linear combination of the predictors such that the between-group variance
+was maximized relative to the within-group variance. [...] find the combination of
+the predictors that gave maximum separation between the centers of the data while
+at the same time minimizing the variation within each group of data.
